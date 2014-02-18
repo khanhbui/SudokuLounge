@@ -25,6 +25,7 @@
  ****************************************************************************/
 
 require("src/core/Sudoku.js");
+require("src/core/Utils.js");
 
 var MyLayer = cc.Layer.extend({
     isMouseDown:false,
@@ -39,38 +40,56 @@ var MyLayer = cc.Layer.extend({
     },
 
     init:function () {
-
-        //////////////////////////////
-        // 1. super init first
         this._super();
 
-        /////////////////////////////
-        // 2. add a menu item with "X" image, which is clicked to quit the program
-        //    you may modify it.
-        // ask director the window size
-        var size = cc.Director.getInstance().getWinSize();
+        this.setKeypadEnabled(true);
 
-        /////////////////////////////
-        // 3. add your codes below...
-        // add a label shows "Hello World"
-        // create and initialize a label
-        this.helloLabel = cc.LabelTTF.create("SUDOKU", "Arial", 30);
-        this.helloLabel.setPosition(cc.p(size.width / 2 - 40, size.height - 20));
-        this.addChild(this.helloLabel, 5);
-        this.helloLabel = cc.LabelTTF.create("LOUNGE", "Arial", 30);
-        this.helloLabel.setPosition(cc.p(size.width / 2 + 40, size.height - 50));
-        this.addChild(this.helloLabel, 5);
+        var sudokuLabel = cc.LabelTTF.create("SUDOKU", "Arial", Utils.s(30));
+        sudokuLabel.setAnchorPoint(cc.p(0, 0));
+        sudokuLabel.setPosition(Utils.p(70, 440));
+        this.addChild(sudokuLabel, 1);
 
-        // add "Helloworld" splash screen"
+        var loungeLabel = cc.LabelTTF.create("LOUNGE", "Arial", Utils.s(30));
+        loungeLabel.setAnchorPoint(cc.p(0, 0));
+        loungeLabel.setPosition(Utils.p(120, 410));
+        this.addChild(loungeLabel, 2);
+
         this.sprite = cc.Sprite.create("res/bg.png");
-        this.sprite.setAnchorPoint(cc.p(0.5, 0.5));
-        this.sprite.setPosition(cc.p(size.width / 2, size.height / 2));
-
+        this.sprite.setAnchorPoint(cc.p(0, 0));
+        this.sprite.setPosition(Utils.p(0, 0));
         this.addChild(this.sprite, 0);
 
         this._sudoku = new Sudoku();
-        this.createTable(this.sprite);
+        this.start();
 
+        return true;
+    },
+
+    start: function() {
+        cc.log("starting...");
+        if (this._cells) {
+            for (var i = 0; i < TABLE_SIZE; ++i) {
+                if (this._cells[i]) {
+                    for (var j = 0; j < TABLE_SIZE; ++j) {
+                        if (this._cells[i][j]) {
+                            this.sprite.removeChild(this._cells[i][j], true);
+                        }
+                    }
+                }
+                if (this._candidates[i]) {
+                    this.sprite.removeChild(this._candidates[i], true);
+                }
+            }
+        }
+        this.createTable(this.sprite);
+    },
+
+    isResolved: function() {
+        for (var i = 0; i < TABLE_SIZE; ++i) {
+            if (this._candidates[i] && this._candidates[i].isVisible()) {
+                return false;
+            }
+        }
         return true;
     },
 
@@ -80,9 +99,8 @@ var MyLayer = cc.Layer.extend({
         this._sudoku.print();
         var data = this._sudoku.getUnsolvedTable();
 
-        var p = container.getPosition();
-        var x = p.x - 125;
-        var y = p.y + 148;
+        var x = 20;
+        var y = 480 - 107;
         this._cells = [];
         this._candidates = [];
         for (var i = 0; i < TABLE_SIZE; ++i) {
@@ -96,21 +114,22 @@ var MyLayer = cc.Layer.extend({
                     dx += 10;
                 }
                 var cell = new Cell("" + (data[i][j] == 0 ? "" : data[i][j]), this._onSelectCell.bind(this, i, j));
-                cell.setAnchorPoint(cc.p(0.5, 0.5));
-                cell.setPosition(cc.p(x + j * 29 + dx, y - i * 28));
+                cell.setAnchorPoint(cc.p(0, 0));
+                cell.setPosition(Utils.p(x + j * 29 + dx, y - i * 28));
                 cell.setScale(0.22);
                 container.addChild(cell);
                 this._cells[i][j] = cell;
             }
 
             var candidate = new Cell("" + (i + 1), this._onSelectCandidate.bind(this, i + 1));
-            candidate.setPosition(x + i * 32, p.y - 130);
+            candidate.setAnchorPoint(cc.p(0, 0));
+            candidate.setPosition(Utils.p(x + i * 32, 480 - 385));
             candidate.setScale(0.25);
             container.addChild(candidate);
             candidate.runAction(cc.RepeatForever.create(
                 cc.Sequence.create(
-                    cc.RotateTo.create(0.2, 5),
-                    cc.RotateTo.create(0.2, -5)
+                    cc.RotateTo.create(0.5, 5),
+                    cc.RotateTo.create(0.5, -5)
                 )
             ));
             this._candidates[i] = candidate;
@@ -180,11 +199,19 @@ var MyLayer = cc.Layer.extend({
         }
         if (count >= 9) {
             this._candidates[number - 1].setVisible(false);
+            if (this.isResolved()) {
+                this.start(this.sprite);
+            }
         }
         this._prevNumber = number;
     },
 
     update: function(elapsed) {
+    },
+
+    backClicked: function() {
+        cc.log("aaaaaaaaaaa");
+        cc.Director.getInstance().end();
     }
 });
 
@@ -200,10 +227,10 @@ var Cell = cc.Node.extend({
                     onSelect();
                 };
             }.bind(this),this);
-        this._image.setAnchorPoint(cc.p(0.5, 0.5));
+        this._image.setAnchorPoint(cc.p(0, 0));
 
-        this._number = cc.LabelTTF.create(text, "Arial", 70);
-        this._number.setPosition(cc.p(128 / 2, 126 / 2));
+        this._number = cc.LabelTTF.create(text, "Arial", Utils.s(70));
+        this._number.setPosition(Utils.p(128 / 2, 126 / 2));
         this._image.addChild(this._number);
 
         var menu = cc.Menu.create(this._image);

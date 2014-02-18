@@ -32,7 +32,7 @@ public class SudokuLounge extends Cocos2dxActivity{
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 	}
-	
+
     static {
         System.loadLibrary("cocos2djs");
     }
