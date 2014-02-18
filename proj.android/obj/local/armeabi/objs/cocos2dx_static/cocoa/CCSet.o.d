@@ -9,7 +9,7 @@ obj/local/armeabi/objs/cocos2dx_static/cocoa/CCSet.o: \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/log.h \
  /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCSet.h:
@@ -30,6 +30,6 @@ obj/local/armeabi/objs/cocos2dx_static/cocoa/CCSet.o: \
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/log.h:
 
 /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string:

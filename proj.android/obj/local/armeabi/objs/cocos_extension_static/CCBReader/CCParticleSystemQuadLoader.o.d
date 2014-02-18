@@ -10,7 +10,7 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/log.h \
  /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../extensions/CCBReader/../GUI/CCControlExtension/../../ExtensionMacros.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/include/cocos2d.h \
@@ -18,32 +18,32 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/actions/CCAction.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCGeometry.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCObject.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/math.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/math.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/actions/CCActionInterval.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/base_nodes/CCNode.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/include/ccMacros.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/CCCommon.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/CCPlatformMacros.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCStdC.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/alloca.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/strings.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdlib.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/alloca.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/strings.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/memory.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCAffineTransform.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCGeometry.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCArray.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/support/data_support/ccCArray.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCGL.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/shaders/ccGLStateCache.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/shaders/CCGLProgram.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/kazmath.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/vec2.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/vec3.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/assert.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/assert.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/mat3.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/utility.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/mat4.h \
@@ -69,7 +69,7 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/sprite_nodes/CCAnimation.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCDictionary.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/support/data_support/uthash.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/inttypes.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/inttypes.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCArray.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCString.h \
  /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/functional \
@@ -238,7 +238,7 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCPlatformDefine.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/log.h:
 
 /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string:
 
@@ -254,7 +254,7 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCObject.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/math.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/math.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/actions/CCActionInterval.h:
 
@@ -268,13 +268,13 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCStdC.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdlib.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/alloca.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/alloca.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/strings.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/strings.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/memory.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCAffineTransform.h:
 
@@ -286,13 +286,13 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCGL.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/shaders/ccGLStateCache.h:
 
@@ -304,7 +304,7 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/vec3.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/assert.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/assert.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/mat3.h:
 
@@ -356,7 +356,7 @@ obj/local/armeabi/objs/cocos_extension_static/CCBReader/CCParticleSystemQuadLoad
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/support/data_support/uthash.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/inttypes.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/inttypes.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCArray.h:
 

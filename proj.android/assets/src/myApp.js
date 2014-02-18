@@ -126,12 +126,12 @@ var MyLayer = cc.Layer.extend({
             candidate.setPosition(Utils.p(x + i * 32, 480 - 385));
             candidate.setScale(0.25);
             container.addChild(candidate);
-            candidate.runAction(cc.RepeatForever.create(
-                cc.Sequence.create(
-                    cc.RotateTo.create(0.5, 5),
-                    cc.RotateTo.create(0.5, -5)
-                )
-            ));
+            // candidate.runAction(cc.RepeatForever.create(
+            //     cc.Sequence.create(
+            //         cc.RotateTo.create(0.5, 5),
+            //         cc.RotateTo.create(0.5, -5)
+            //     )
+            // ));
             this._candidates[i] = candidate;
         }
     },

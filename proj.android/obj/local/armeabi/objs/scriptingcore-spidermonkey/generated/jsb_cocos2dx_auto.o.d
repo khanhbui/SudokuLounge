@@ -7,43 +7,43 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/FloatingPoint.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/Assertions.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/Attributes.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdio.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/api-level.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdint.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/_types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/_types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/_wchar_limits.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/posix_types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/stddef.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/compiler.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/posix_types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/kernel.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/string.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/malloc.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/alloca.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/strings.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/signal.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/limits.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/limits.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/limits.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/internal_types.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/limits.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/syslimits.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/page.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/signal.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm-generic/signal.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/sigcontext.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/siginfo.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm-generic/siginfo.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdio.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/cdefs.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/api-level.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdint.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/_types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/_types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/_wchar_limits.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/posix_types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/stddef.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/compiler.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/posix_types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/kernel.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdlib.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/string.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/malloc.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/alloca.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/strings.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/memory.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/signal.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/limits.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/limits.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/limits.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/internal_types.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/limits.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/syslimits.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/page.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/signal.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm-generic/signal.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/sigcontext.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/siginfo.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm-generic/siginfo.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/log.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/StandardInteger.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/GuardObjects.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/Types.h \
@@ -51,11 +51,11 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/Util.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/StandardInteger.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/ThreadLocal.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/pthread.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/time.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/time.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/time.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sched.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/pthread.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/time.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/time.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/time.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sched.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js-config.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jsalloc.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jsutil.h \
@@ -65,9 +65,9 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jstypes.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/Util.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jscpucfg.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/endian.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/endian.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/endian.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/endian.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/endian.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/endian.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js/TemplateLib.h \
  /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/new \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jspubtd.h \
@@ -76,7 +76,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jstypes.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/gc/Root.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/TypeTraits.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/wchar.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/wchar.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js/Utility.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jspubtd.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js/Anchor.h \
@@ -104,7 +104,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js.msg \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/bindings/cocos2d_specifics.hpp \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/bindings/ScriptingCore.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/assert.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/assert.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/include/cocos2d.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/include/ccConfig.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
@@ -118,7 +118,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCGeometry.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCObject.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/math.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/math.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/actions/CCActionInterval.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/base_nodes/CCNode.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/include/ccMacros.h \
@@ -130,10 +130,10 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCArray.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/support/data_support/ccCArray.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCGL.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/shaders/ccGLStateCache.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/shaders/CCGLProgram.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/kazmath/include/kazmath/kazmath.h \
@@ -164,7 +164,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/sprite_nodes/CCAnimation.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCDictionary.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/support/data_support/uthash.h \
- /Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/inttypes.h \
+ /Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/inttypes.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCArray.h \
  /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCString.h \
  /Users/u1198/work/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/functional \
@@ -343,79 +343,79 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/Attributes.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdio.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdio.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/cdefs.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/cdefs_elf.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/api-level.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/api-level.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdint.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdint.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/_types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/_types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/_types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/_types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/_wchar_limits.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/_wchar_limits.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/posix_types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/posix_types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/stddef.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/stddef.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/compiler.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/compiler.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/posix_types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/posix_types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/kernel.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/kernel.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/sysmacros.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/sysmacros.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/stdlib.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/stdlib.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/string.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/string.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/malloc.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/malloc.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/alloca.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/alloca.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/strings.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/strings.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/memory.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/memory.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/signal.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/signal.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/limits.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/limits.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/limits.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/limits.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/limits.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/limits.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/internal_types.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/internal_types.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/limits.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/limits.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/syslimits.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/syslimits.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/page.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/page.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/signal.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/signal.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm-generic/signal.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm-generic/signal.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/sigcontext.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/sigcontext.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm/siginfo.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm/siginfo.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/asm-generic/siginfo.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/asm-generic/siginfo.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/android/log.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/android/log.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/StandardInteger.h:
 
@@ -431,15 +431,15 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/ThreadLocal.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/pthread.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/pthread.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/time.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/time.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/time.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/time.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/linux/time.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/linux/time.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sched.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sched.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js-config.h:
 
@@ -459,11 +459,11 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/jscpucfg.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/endian.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/endian.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/sys/endian.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/sys/endian.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/machine/endian.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/machine/endian.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js/TemplateLib.h:
 
@@ -481,7 +481,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/mozilla/TypeTraits.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/wchar.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/wchar.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/spidermonkey-android/include/js/Utility.h:
 
@@ -537,7 +537,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../scripting/javascript/bindings/ScriptingCore.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/assert.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/assert.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/include/cocos2d.h:
 
@@ -565,7 +565,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCObject.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/math.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/math.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/actions/CCActionInterval.h:
 
@@ -589,13 +589,13 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/platform/android/CCGL.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/GLES2/gl2ext.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/shaders/ccGLStateCache.h:
 
@@ -657,7 +657,7 @@ obj/local/armeabi/objs/scriptingcore-spidermonkey/generated/jsb_cocos2dx_auto.o:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/support/data_support/uthash.h:
 
-/Users/u1198/work/android-ndk-r9c/platforms/android-8/arch-arm/usr/include/inttypes.h:
+/Users/u1198/work/android-ndk-r9c/platforms/android-16/arch-arm/usr/include/inttypes.h:
 
 /Users/u1198/work/git/cocos2d-x/projects/SudokuLounge/proj.android/../../../cocos2dx/cocoa/CCArray.h:
 

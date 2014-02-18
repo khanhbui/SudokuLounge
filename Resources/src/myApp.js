@@ -82,6 +82,7 @@ var MyLayer = cc.Layer.extend({
             }
         }
         this.createTable(this.sprite);
+        this._checkForCandidates();
     },
 
     isResolved: function() {
@@ -97,10 +98,10 @@ var MyLayer = cc.Layer.extend({
         this._sudoku.reset();
         this._sudoku.solve();
         this._sudoku.print();
-        var data = this._sudoku.getUnsolvedTable();
+        this._data = this._sudoku.getUnsolvedTable(20 + Random.getInstance().getInt(30));
 
-        var x = 20;
-        var y = 480 - 107;
+        var x = 34;
+        var y = 480 - 93;
         this._cells = [];
         this._candidates = [];
         for (var i = 0; i < TABLE_SIZE; ++i) {
@@ -113,7 +114,8 @@ var MyLayer = cc.Layer.extend({
                 if (j == 3 || j == 6) {
                     dx += 10;
                 }
-                var cell = new Cell("" + (data[i][j] == 0 ? "" : data[i][j]), this._onSelectCell.bind(this, i, j));
+
+                var cell = new Cell(this._data[i][j], this._onSelectCell.bind(this, i, j));
                 cell.setAnchorPoint(cc.p(0, 0));
                 cell.setPosition(Utils.p(x + j * 29 + dx, y - i * 28));
                 cell.setScale(0.22);
@@ -121,17 +123,11 @@ var MyLayer = cc.Layer.extend({
                 this._cells[i][j] = cell;
             }
 
-            var candidate = new Cell("" + (i + 1), this._onSelectCandidate.bind(this, i + 1));
+            var candidate = new Cell(i + 1, this._onSelectCandidate.bind(this, i + 1));
             candidate.setAnchorPoint(cc.p(0, 0));
-            candidate.setPosition(Utils.p(x + i * 32, 480 - 385));
+            candidate.setPosition(Utils.p(x + i * 32, 480 - 370));
             candidate.setScale(0.25);
-            container.addChild(candidate);
-            candidate.runAction(cc.RepeatForever.create(
-                cc.Sequence.create(
-                    cc.RotateTo.create(0.5, 5),
-                    cc.RotateTo.create(0.5, -5)
-                )
-            ));
+            container.addChild(candidate, 100);
             this._candidates[i] = candidate;
         }
     },
@@ -150,9 +146,9 @@ var MyLayer = cc.Layer.extend({
         if (this._prevNumber > 0) {
             for (var i = 0; i < TABLE_SIZE; ++i) {
                 for (var j = 0; j < TABLE_SIZE; ++j) {
-                    var cell = this._cells[i][j];
-                    if (parseInt(cell.getText()) == this._prevNumber) {
-                        cell.setHighlight(0);
+                    var number = this._data[i][j];
+                    if (number == this._prevNumber) {
+                        this._cells[i][j].setHighlight(0);
                     }
                 }
             }
@@ -167,8 +163,12 @@ var MyLayer = cc.Layer.extend({
         }
         else {
             for (var k = 0; k < TABLE_SIZE; ++k) {
-                this._cells[i][k].setHighlight(1);
-                this._cells[k][j].setHighlight(1);
+                if (this._data[i][k] != 0) {
+                    this._cells[i][k].setHighlight(1);
+                }
+                if (this._data[k][j] != 0) {
+                    this._cells[k][j].setHighlight(1);
+                }
             }
             this._cells[i][j].setHighlight(3);
             this._emptyCell = this._cells[i][j];
@@ -180,37 +180,67 @@ var MyLayer = cc.Layer.extend({
     _onSelectCandidate: function(number) {
         if (this._emptyCell) {
             if (this._sudoku.isValid(number, this._prevI, this._prevJ)) {
-                this._emptyCell.setText("" + number);
+                this._emptyCell.setText(number);
+                this._data[this._prevI][this._prevJ] = number;
+
+                var p = this._candidates[number - 1].getPosition();
+                this._candidates[number - 1].setZOrder(1000);
+                this._candidates[number - 1].runAction(cc.Sequence.create(
+                    cc.MoveTo.create(0.3, this._emptyCell.getPosition()),
+                    cc.Hide.create(),
+                    cc.CallFunc.create(function() {
+                        this._candidates[number - 1].setPosition(p);
+                        this._candidates[number - 1].setZOrder(100);
+                    }.bind(this)),
+                    cc.Show.create()
+                ));
+
+                this._emptyCell = null;
             }
             else {
+                this._candidates[number - 1].runAction(cc.Sequence.create(
+                    cc.RotateTo.create(0.05, 20),
+                    cc.RotateTo.create(0.1, -20),
+                    cc.RotateTo.create(0.05, 0)
+                ));
                 return;
             }
         }
         this._clearHighlight();
-        var count = 0;
         for (var i = 0; i < TABLE_SIZE; ++i) {
             for (var j = 0; j < TABLE_SIZE; ++j) {
                 var cell = this._cells[i][j];
-                if (parseInt(cell.getText()) == number) {
+                if (this._data[i][j] == number) {
                     cell.setHighlight(2);
-                    count++;
                 }
             }
         }
-        if (count >= 9) {
-            this._candidates[number - 1].setVisible(false);
-            if (this.isResolved()) {
-                this.start(this.sprite);
-            }
+        this._checkForCandidates();
+        if (this.isResolved()) {
+            this.start(this.sprite);
         }
         this._prevNumber = number;
+    },
+
+    _checkForCandidates: function() {
+        for (var number = 1; number <= TABLE_SIZE; ++number) {
+            var count = 0;
+            for (var i = 0; i < TABLE_SIZE; ++i) {
+                for (var j = 0; j < TABLE_SIZE; ++j) {
+                    var value = this._data[i][j];
+                    if (value == number) {
+                        count++;
+                    }
+                }
+            }
+            this._candidates[number - 1].setVisible(count < 9);
+        }
     },
 
     update: function(elapsed) {
     },
 
     backClicked: function() {
-        cc.log("aaaaaaaaaaa");
         cc.Director.getInstance().end();
     }
 });
@@ -227,15 +257,17 @@ var Cell = cc.Node.extend({
                     onSelect();
                 };
             }.bind(this),this);
-        this._image.setAnchorPoint(cc.p(0, 0));
+        this._image.setAnchorPoint(cc.p(0.5, 0.5));
 
-        this._number = cc.LabelTTF.create(text, "Arial", Utils.s(70));
+        this._number = cc.LabelTTF.create("", "Arial", Utils.s(70));
         this._number.setPosition(Utils.p(128 / 2, 126 / 2));
         this._image.addChild(this._number);
 
         var menu = cc.Menu.create(this._image);
         menu.setPosition(cc.p(0, 0));
         this.addChild(menu);
+
+        this.setText(text == 0 ? "" : text);
     },
 
     setText: function(text) {

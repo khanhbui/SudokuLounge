@@ -12,20 +12,18 @@ var Sudoku = cc.Class.extend({
 		this._cols = [];
 		this._cells = [];
 		this._result = [];
-		this._problem = [];
+		this._problem = null;
 
 		for (var i = 0; i < TABLE_SIZE; ++i) {
 			this._rows[i] = [];
 			this._cols[i] = [];
 			this._cells[i] = [];
 			this._result[i] = [];
-			this._problem[i] = [];
 			for (var j = 1; j <= TABLE_SIZE; ++j) {
 				this._rows[i][j] = true;
 				this._cols[i][j] = true;
 				this._cells[i][j] = true;
 				this._result[i][j - 1] = 0;
-				this._problem[i][j - 1] = 0;
 			}
 		}
 	},
@@ -49,7 +47,7 @@ var Sudoku = cc.Class.extend({
 				cc.log('----------------------------------------');
 			}
 		}
-		cc.log('***************************************************');
+		cc.log('****************************************');
 	},
 
 	isValid: function (number, row, col) {
@@ -61,7 +59,7 @@ var Sudoku = cc.Class.extend({
 			return true;
 		}
 
-		var candidates = this._getRandomValues();
+		var candidates = this._getRandomValues(TABLE_SIZE);
 
 		var row = ~~(index / TABLE_SIZE);
 		var col = index % TABLE_SIZE;
@@ -75,7 +73,6 @@ var Sudoku = cc.Class.extend({
 				this._cols[col][number] = false;
 				this._cells[cell][number] = false;
 				this._result[row][col] = number;
-				this._problem[row][col] = (i + number + index) % 3 == 0 ? 0 : number;
 
 				if (this._try(index + 1)) {
 					return true;
@@ -85,22 +82,21 @@ var Sudoku = cc.Class.extend({
 				this._cols[col][number] = true;
 				this._cells[cell][number] = true;
 				this._result[row][col] = 0;
-				this._problem[row][col] = 0;
 			}
 		}
 
 		return false;
 	},
 
-	_getRandomValues: function() {
+	_getRandomValues: function(size) {
 		var values = [];
-		for (var i = 0; i < TABLE_SIZE; ++i) {
+		for (var i = 0; i < size; ++i) {
 			values[i] = i + 1;
 		}
 
-		for (var i = 0; i < TABLE_SIZE; ++i) {
-			var j = Random.getInstance().getInt(TABLE_SIZE);
-			var k = Random.getInstance().getInt(TABLE_SIZE);
+		for (var i = 0; i < size; ++i) {
+			var j = Random.getInstance().getInt(size);
+			var k = Random.getInstance().getInt(size);
 			if (j != k) {
 				var temp = values[j];
 				values[j] = values[k];
@@ -118,7 +114,25 @@ var Sudoku = cc.Class.extend({
 		return this._result;
 	},
 
-	getUnsolvedTable: function() {
+	getUnsolvedTable: function(level) {
+		if (!this._problem) {
+			level = level || 20;
+			var samples = this._getRandomValues(TABLE_SIZE * TABLE_SIZE);
+			samples = samples.splice(level, TABLE_SIZE * TABLE_SIZE - level);
+			cc.log("level: " + level + ", s: " + samples);
+			this._problem = [];
+			for (var i = 0; i < TABLE_SIZE; ++i) {
+				this._problem[i] = [];
+				for (var j = 0; j < TABLE_SIZE; ++j) {
+					if (samples.indexOf(i * TABLE_SIZE + j + 1) == -1) {
+						this._problem[i][j] = 0;
+					}
+					else {
+						this._problem[i][j] = this._result[i][j];
+					}
+				}
+			}
+		}
 		return this._problem;
 	}
 });

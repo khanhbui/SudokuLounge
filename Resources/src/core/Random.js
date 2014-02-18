@@ -10,7 +10,6 @@ var Random = cc.Class.extend({
             521288629,
             88675123
         ]);
-        cc.log("keke");
     },
 
     /**
