@@ -47,26 +47,35 @@ var MyLayer = cc.Layer.extend({
         var sudokuLabel = cc.LabelTTF.create("SUDOKU", "Arial", Utils.s(30));
         sudokuLabel.setAnchorPoint(cc.p(0, 0));
         sudokuLabel.setPosition(Utils.p(70, 440));
-        this.addChild(sudokuLabel, 1);
+        //this.addChild(sudokuLabel, 1);
 
         var loungeLabel = cc.LabelTTF.create("LOUNGE", "Arial", Utils.s(30));
         loungeLabel.setAnchorPoint(cc.p(0, 0));
         loungeLabel.setPosition(Utils.p(120, 410));
-        this.addChild(loungeLabel, 2);
+        //this.addChild(loungeLabel, 2);
 
         this.sprite = cc.Sprite.create("res/bg.png");
         this.sprite.setAnchorPoint(cc.p(0, 0));
         this.sprite.setPosition(Utils.p(0, 0));
         this.addChild(this.sprite, 0);
 
+        this._createScorePanels();
+        this._createButtons();
+
         this._sudoku = new Sudoku();
-        this.start();
+        this._level = 30;
+        this.start(0);
 
         return true;
     },
 
-    start: function() {
+    start: function(levelStep) {
         cc.log("starting...");
+
+        this._isPlaying = false;
+        this._score = 0;
+        this._time = 0;
+
         if (this._cells) {
             for (var i = 0; i < TABLE_SIZE; ++i) {
                 if (this._cells[i]) {
@@ -81,8 +90,9 @@ var MyLayer = cc.Layer.extend({
                 }
             }
         }
-        this.createTable(this.sprite);
+        this.createTable(this.sprite, levelStep);
         this._checkForCandidates();
+        this._level += levelStep;
     },
 
     isResolved: function() {
@@ -98,7 +108,7 @@ var MyLayer = cc.Layer.extend({
         this._sudoku.reset();
         this._sudoku.solve();
         this._sudoku.print();
-        this._data = this._sudoku.getUnsolvedTable(20 + Random.getInstance().getInt(30));
+        this._data = this._sudoku.getUnsolvedTable(this._level);
 
         var x = 34;
         var y = 480 - 93;
@@ -118,7 +128,6 @@ var MyLayer = cc.Layer.extend({
                 var cell = new Cell(this._data[i][j], this._onSelectCell.bind(this, i, j));
                 cell.setAnchorPoint(cc.p(0, 0));
                 cell.setPosition(Utils.p(x + j * 29 + dx, y - i * 28));
-                cell.setScale(0.22);
                 container.addChild(cell);
                 this._cells[i][j] = cell;
             }
@@ -126,7 +135,7 @@ var MyLayer = cc.Layer.extend({
             var candidate = new Cell(i + 1, this._onSelectCandidate.bind(this, i + 1));
             candidate.setAnchorPoint(cc.p(0, 0));
             candidate.setPosition(Utils.p(x + i * 32, 480 - 370));
-            candidate.setScale(0.25);
+            candidate.setScale(1.15);
             container.addChild(candidate, 100);
             this._candidates[i] = candidate;
         }
@@ -192,8 +201,10 @@ var MyLayer = cc.Layer.extend({
                         this._candidates[number - 1].setPosition(p);
                         this._candidates[number - 1].setZOrder(100);
                     }.bind(this)),
-                    cc.Show.create()
+                    cc.Show.create(),
+                    cc.CallFunc.create(this._checkForCandidates.bind(this))
                 ));
+                this._score += 20;
 
                 this._emptyCell = null;
             }
@@ -203,6 +214,8 @@ var MyLayer = cc.Layer.extend({
                     cc.RotateTo.create(0.1, -20),
                     cc.RotateTo.create(0.05, 0)
                 ));
+                this._score -= 10;
+                this._checkForCandidates();
                 return;
             }
         }
@@ -215,9 +228,8 @@ var MyLayer = cc.Layer.extend({
                 }
             }
         }
-        this._checkForCandidates();
         if (this.isResolved()) {
-            this.start(this.sprite);
+            this.start(1);
         }
         this._prevNumber = number;
     },
@@ -238,10 +250,108 @@ var MyLayer = cc.Layer.extend({
     },
 
     update: function(elapsed) {
+        if (!this._isPlaying) {
+            return;
+        }
+
+        this._scoreLabel.setString("Score: " + this._score);
+        this._timeLabel.setString("Time: " + Utils.formatTime(this._time));
+        this._time += elapsed;
     },
 
     backClicked: function() {
         cc.Director.getInstance().end();
+    },
+
+    _createButtons: function() {
+        var x = 50;
+        var y = 40;
+        var reset = new Button(["res/reset.png", "res/reset.png"], [x, y], function() {
+            cc.log("reset");
+            this.start(0);
+            play.setEnabled(true);
+            pause.setEnabled(false);
+        }.bind(this));
+        this.addChild(reset);
+
+        var play = new Button(["res/play.png", "res/play.png"], [x + 55, y], function() {
+            cc.log("play");
+            play.setEnabled(false);
+            pause.setEnabled(true);
+            this._isPlaying = true;
+        }.bind(this));
+        play.setEnabled(true);
+        this.addChild(play);
+
+        var pause = new Button(["res/pause.png", "res/pause.png"], [x + 55 * 2, y], function() {
+            cc.log("pause");
+            play.setEnabled(true);
+            pause.setEnabled(false);
+            this._isPlaying = false;
+        }.bind(this));
+        pause.setEnabled(false);
+        this.addChild(pause);
+
+        var hint = new Button(["res/hint.png", "res/hint.png"], [x + 55 * 3, y], function() {
+            cc.log("hint");
+        }.bind(this));
+        hint.setEnabled(false);
+        this.addChild(hint);
+
+        var stop = new Button(["res/stop.png", "res/stop.png"], [x + 55 * 4, y], function() {
+            cc.log("stop");
+            this.backClicked();
+        }.bind(this));
+        this.addChild(stop);
+    },
+
+    _createScorePanels: function() {
+        var x = 35;
+        var y = 430;
+        var scorePanel = cc.Sprite.create("res/panel1.png");
+        scorePanel.setAnchorPoint(cc.p(0, 0));
+        scorePanel.setPosition(Utils.p(x, y));
+        this.addChild(scorePanel, 0);
+
+        this._scoreLabel = cc.LabelTTF.create("Score: 0", "Arial", Utils.s(14));
+        this._scoreLabel.setPosition(Utils.p(120 / 2, 28 / 2));
+        scorePanel.addChild(this._scoreLabel);
+
+        var timePanel = cc.Sprite.create("res/panel1.png");
+        timePanel.setAnchorPoint(cc.p(0, 0));
+        timePanel.setPosition(Utils.p(x + 130, y));
+        this.addChild(timePanel, 0);
+
+        this._timeLabel = cc.LabelTTF.create("Time: 00:00:00", "Arial", Utils.s(14));
+        this._timeLabel.setPosition(Utils.p(120 / 2, 28 / 2));
+        timePanel.addChild(this._timeLabel);
+    }
+});
+
+var Button = cc.Node.extend({
+    ctor: function(images, pos, onClick) {
+        this._super();
+
+        this.setAnchorPoint(cc.p(0, 0));
+        this.setPosition(Utils.p(pos[0], pos[1]));
+
+        this._image = cc.MenuItemImage.create(
+            images[0],
+            images[1],
+            function () {
+                if (onClick) {
+                    onClick();
+                };
+            }.bind(this),this);
+        this._image.setAnchorPoint(cc.p(0.5, 0.5));
+
+        this._menu = cc.Menu.create(this._image);
+        this._menu.setPosition(cc.p(0, 0));
+        this.addChild(this._menu);
+    },
+
+    setEnabled: function(value) {
+        this._menu.setEnabled(value);
     }
 });
 
@@ -259,8 +369,8 @@ var Cell = cc.Node.extend({
             }.bind(this),this);
         this._image.setAnchorPoint(cc.p(0.5, 0.5));
 
-        this._number = cc.LabelTTF.create("", "Arial", Utils.s(70));
-        this._number.setPosition(Utils.p(128 / 2, 126 / 2));
+        this._number = cc.LabelTTF.create("", "Arial", Utils.s(18));
+        this._number.setPosition(Utils.p(28 / 2, 28 / 2));
         this._image.addChild(this._number);
 
         var menu = cc.Menu.create(this._image);
@@ -292,8 +402,8 @@ var Cell = cc.Node.extend({
 var MyScene = cc.Scene.extend({
     ctor:function() {
         this._super();
-        cc.associateWithNative( this, cc.Scene );
-        // this.scheduleUpdate();
+        this.scheduleUpdate();
+        cc.associateWithNative(this, cc.Scene);
     },
 
     onEnter:function () {

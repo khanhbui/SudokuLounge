@@ -16,6 +16,29 @@ var _Utils = cc.Class.extend({
 
 	s: function(s) {
 		return s / this._scaleFactor;
+	},
+
+	getFormattedNumber : function(value) {
+        if (value < 10) {
+            return "0" + value;
+        }
+
+        return value;
+    },
+
+	formatTime: function(value) {
+		var h = Math.floor(value / 3600);
+        value -= h * 3600;
+        h = h > 0 ? h : 0;
+
+        var m = Math.floor(value / 60);
+        value -= m * 60;
+        m = m > 0 ? m : 0;
+
+        var s = Math.floor(value);
+        s = s > 0 ? s : 0;
+
+        return this.getFormattedNumber(h) + ":" + this.getFormattedNumber(m) + ":" + this.getFormattedNumber(s);
 	}
 });
 
