@@ -28,15 +28,9 @@ require("src/core/Sudoku.js");
 require("src/core/Utils.js");
 
 var MyLayer = cc.Layer.extend({
-    isMouseDown:false,
-    helloImg:null,
-    helloLabel:null,
-    circle:null,
-    sprite:null,
-
     ctor:function() {
         this._super();
-        cc.associateWithNative( this, cc.Layer );
+        cc.associateWithNative(this, cc.Layer);
     },
 
     init:function () {
@@ -44,20 +38,10 @@ var MyLayer = cc.Layer.extend({
 
         this.setKeypadEnabled(true);
 
-        var sudokuLabel = cc.LabelTTF.create("SUDOKU", "Arial", Utils.s(30));
-        sudokuLabel.setAnchorPoint(cc.p(0, 0));
-        sudokuLabel.setPosition(Utils.p(70, 440));
-        //this.addChild(sudokuLabel, 1);
 
-        var loungeLabel = cc.LabelTTF.create("LOUNGE", "Arial", Utils.s(30));
-        loungeLabel.setAnchorPoint(cc.p(0, 0));
-        loungeLabel.setPosition(Utils.p(120, 410));
-        //this.addChild(loungeLabel, 2);
-
-        this.sprite = cc.Sprite.create("res/bg.png");
-        this.sprite.setAnchorPoint(cc.p(0, 0));
-        this.sprite.setPosition(Utils.p(0, 0));
-        this.addChild(this.sprite, 0);
+        this._tableSprite = cc.Sprite.create("res/bg.png");
+        this._tableSprite.setAnchorPoint(cc.p(0, 0));
+        this.addChild(this._tableSprite);
 
         this._createScorePanels();
         this._createButtons();
@@ -81,16 +65,16 @@ var MyLayer = cc.Layer.extend({
                 if (this._cells[i]) {
                     for (var j = 0; j < TABLE_SIZE; ++j) {
                         if (this._cells[i][j]) {
-                            this.sprite.removeChild(this._cells[i][j], true);
+                            this._tableSprite.removeChild(this._cells[i][j], true);
                         }
                     }
                 }
                 if (this._candidates[i]) {
-                    this.sprite.removeChild(this._candidates[i], true);
+                    this._tableSprite.removeChild(this._candidates[i], true);
                 }
             }
         }
-        this.createTable(this.sprite, levelStep);
+        this.createTable(this._tableSprite, levelStep);
         this._checkForCandidates();
         this._level += levelStep;
     },
@@ -139,6 +123,8 @@ var MyLayer = cc.Layer.extend({
             container.addChild(candidate, 100);
             this._candidates[i] = candidate;
         }
+
+        this._blockTable(false);
     },
 
     _clearHighlight: function() {
@@ -266,7 +252,7 @@ var MyLayer = cc.Layer.extend({
     _createButtons: function() {
         var x = 50;
         var y = 40;
-        var reset = new Button(["res/reset.png", "res/reset.png"], [x, y], function() {
+        var reset = new Button(["res/reset.png", "res/reset_disable.png", "res/reset_disable.png"], [x, y], function() {
             cc.log("reset");
             this.start(0);
             play.setEnabled(true);
@@ -274,31 +260,33 @@ var MyLayer = cc.Layer.extend({
         }.bind(this));
         this.addChild(reset);
 
-        var play = new Button(["res/play.png", "res/play.png"], [x + 55, y], function() {
+        var play = new Button(["res/play.png", "res/play_disable.png", "res/play_disable.png"], [x + 55, y], function() {
             cc.log("play");
             play.setEnabled(false);
             pause.setEnabled(true);
             this._isPlaying = true;
+            this._blockTable(true);
         }.bind(this));
         play.setEnabled(true);
         this.addChild(play);
 
-        var pause = new Button(["res/pause.png", "res/pause.png"], [x + 55 * 2, y], function() {
+        var pause = new Button(["res/pause.png", "res/pause_disable.png", "res/pause_disable.png"], [x + 55 * 2, y], function() {
             cc.log("pause");
             play.setEnabled(true);
             pause.setEnabled(false);
             this._isPlaying = false;
+            this._blockTable(false);
         }.bind(this));
         pause.setEnabled(false);
         this.addChild(pause);
 
-        var hint = new Button(["res/hint.png", "res/hint.png"], [x + 55 * 3, y], function() {
+        var hint = new Button(["res/hint.png", "res/hint_disable.png", "res/hint_disable.png"], [x + 55 * 3, y], function() {
             cc.log("hint");
         }.bind(this));
         hint.setEnabled(false);
         this.addChild(hint);
 
-        var stop = new Button(["res/stop.png", "res/stop.png"], [x + 55 * 4, y], function() {
+        var stop = new Button(["res/stop.png", "res/stop_disable.png", "res/stop_disable.png"], [x + 55 * 4, y], function() {
             cc.log("stop");
             this.backClicked();
         }.bind(this));
@@ -325,6 +313,23 @@ var MyLayer = cc.Layer.extend({
         this._timeLabel = cc.LabelTTF.create("Time: 00:00:00", "Arial", Utils.s(14));
         this._timeLabel.setPosition(Utils.p(120 / 2, 28 / 2));
         timePanel.addChild(this._timeLabel);
+    },
+
+    _blockTable: function(value) {
+        if (this._cells) {
+            for (var i = 0; i < TABLE_SIZE; ++i) {
+                if (this._cells[i]) {
+                    for (var j = 0; j < TABLE_SIZE; ++j) {
+                        if (this._cells[i][j]) {
+                            this._cells[i][j].setEnabled(value);
+                        }
+                    }
+                }
+                if (this._candidates[i]) {
+                    this._candidates[i].setEnabled(value);
+                }
+            }
+        }
     }
 });
 
@@ -338,6 +343,7 @@ var Button = cc.Node.extend({
         this._image = cc.MenuItemImage.create(
             images[0],
             images[1],
+            images[2],
             function () {
                 if (onClick) {
                     onClick();
@@ -351,7 +357,7 @@ var Button = cc.Node.extend({
     },
 
     setEnabled: function(value) {
-        this._menu.setEnabled(value);
+        this._image.setEnabled(value);
     }
 });
 
@@ -396,6 +402,10 @@ var Cell = cc.Node.extend({
             cc.c4(0, 0, 255, 64)
         ];
         this._image.setColor(colors[value]);
+    },
+
+    setEnabled: function(value) {
+        this._image.setEnabled(value);
     }
 });
 
