@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AC6EF881-0B9B-4962-9B12-1461B005F782</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SudokuLounge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>06EC0AE2-0C27-4E41-935A-2DE50D9B28C3</key>
+		<string>git://github.com/cocos2d/cocos2d-x.git</string>
+		<key>1F1FFE52-9E92-4590-8D5E-15ECA836F363</key>
+		<string>git://github.com/folecr/cocos2dx-autogen-bindings.git</string>
+		<key>39BDCB21-2FD6-4FDB-8772-5F7C4307F3A2</key>
+		<string>https://github.com/khanhbui/SudokuLounge.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>projects/SudokuLounge/proj.ios/SudokuLounge.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>06EC0AE2-0C27-4E41-935A-2DE50D9B28C3</key>
+		<string>../../../../..</string>
+		<key>1F1FFE52-9E92-4590-8D5E-15ECA836F363</key>
+		<string>../../../../../scripting/javascript/bindings/generated</string>
+		<key>39BDCB21-2FD6-4FDB-8772-5F7C4307F3A2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/khanhbui/SudokuLounge.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>06EC0AE2-0C27-4E41-935A-2DE50D9B28C3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>06EC0AE2-0C27-4E41-935A-2DE50D9B28C3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cocos2d-x</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1F1FFE52-9E92-4590-8D5E-15ECA836F363</string>
+			<key>IDESourceControlWCCName</key>
+			<string>generated</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>39BDCB21-2FD6-4FDB-8772-5F7C4307F3A2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SudokuLounge</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -95,7 +95,7 @@ var MyLayer = cc.Layer.extend({
         this._data = this._sudoku.getUnsolvedTable(this._level);
 
         var x = 34;
-        var y = 480 - 93;
+        var y = 480 - 116;
         this._cells = [];
         this._candidates = [];
         for (var i = 0; i < TABLE_SIZE; ++i) {
@@ -118,7 +118,7 @@ var MyLayer = cc.Layer.extend({
 
             var candidate = new Cell(i + 1, this._onSelectCandidate.bind(this, i + 1));
             candidate.setAnchorPoint(cc.p(0, 0));
-            candidate.setPosition(Utils.p(x + i * 32, 480 - 370));
+            candidate.setPosition(Utils.p(x + i * 32, 480 - 393));
             candidate.setScale(1.15);
             container.addChild(candidate, 100);
             this._candidates[i] = candidate;
@@ -251,7 +251,7 @@ var MyLayer = cc.Layer.extend({
 
     _createButtons: function() {
         var x = 50;
-        var y = 40;
+        var y = 32;
         var reset = new Button(["res/reset.png", "res/reset_disable.png", "res/reset_disable.png"], [x, y], function() {
             cc.log("reset");
             this.start(0);
@@ -295,7 +295,7 @@ var MyLayer = cc.Layer.extend({
 
     _createScorePanels: function() {
         var x = 35;
-        var y = 430;
+        var y = 395;
         var scorePanel = cc.Sprite.create("res/panel1.png");
         scorePanel.setAnchorPoint(cc.p(0, 0));
         scorePanel.setPosition(Utils.p(x, y));
