@@ -688,7 +688,7 @@
 		46513EB4187C02A600B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB5187C02A600B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
 		46513EB7187C034200B5ABE1 /* cocos2d-jsb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "cocos2d-jsb.js"; path = "../Resources/cocos2d-jsb.js"; sourceTree = "<group>"; };
-		A922753D1517C094001B78AA /* SudokuLounge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuLounge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A922753D1517C094001B78AA /* Sudoku Lounge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Lounge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92275411517C094001B78AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A92275431517C094001B78AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A92275451517C094001B78AA /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1602,7 +1602,7 @@
 		A922753E1517C094001B78AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A922753D1517C094001B78AA /* SudokuLounge.app */,
+				A922753D1517C094001B78AA /* Sudoku Lounge.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1676,9 +1676,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A922753C1517C094001B78AA /* SudokuLounge */ = {
+		A922753C1517C094001B78AA /* Sudoku Lounge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "SudokuLounge" */;
+			buildConfigurationList = A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "Sudoku Lounge" */;
 			buildPhases = (
 				A92275391517C094001B78AA /* Sources */,
 				A922753A1517C094001B78AA /* Frameworks */,
@@ -1689,9 +1689,9 @@
 			dependencies = (
 				15A3D2F61682F085002FB0C5 /* PBXTargetDependency */,
 			);
-			name = SudokuLounge;
+			name = "Sudoku Lounge";
 			productName = SudokuLounge;
-			productReference = A922753D1517C094001B78AA /* SudokuLounge.app */;
+			productReference = A922753D1517C094001B78AA /* Sudoku Lounge.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1702,7 +1702,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = A92275371517C094001B78AA /* Build configuration list for PBXProject "SudokuLounge" */;
+			buildConfigurationList = A92275371517C094001B78AA /* Build configuration list for PBXProject "Sudoku Lounge" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1720,7 +1720,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				A922753C1517C094001B78AA /* SudokuLounge */,
+				A922753C1517C094001B78AA /* Sudoku Lounge */,
 			);
 		};
 /* End PBXProject section */
@@ -2084,7 +2084,7 @@
 					"-ljs_static",
 					"-ObjC",
 				);
-				PRODUCT_NAME = SudokuLounge;
+				PRODUCT_NAME = "Sudoku Lounge";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2134,7 +2134,7 @@
 					"-ljs_static",
 					"-ObjC",
 				);
-				PRODUCT_NAME = SudokuLounge;
+				PRODUCT_NAME = "Sudoku Lounge";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -2144,7 +2144,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A92275371517C094001B78AA /* Build configuration list for PBXProject "SudokuLounge" */ = {
+		A92275371517C094001B78AA /* Build configuration list for PBXProject "Sudoku Lounge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A92276FE1517C097001B78AA /* Debug */,
@@ -2153,7 +2153,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "SudokuLounge" */ = {
+		A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "Sudoku Lounge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A92277011517C097001B78AA /* Debug */,
