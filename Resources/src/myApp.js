@@ -54,7 +54,7 @@ var MyLayer = cc.Layer.extend({
     },
 
     start: function(levelStep) {
-        cc.log("starting...");
+        cc.log("starting... " + cc.PlatformConfig);
 
         this._isPlaying = false;
         this._score = 0;
