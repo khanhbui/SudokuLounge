@@ -773,7 +773,8 @@
 				D446FDA416102D82000ADA7B /* Default@2x.png */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
+			wrapsLines = 0;
 		};
 		15A3D2ED1682F076002FB0C5 /* Products */ = {
 			isa = PBXGroup;

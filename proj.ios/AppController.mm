@@ -36,7 +36,7 @@ static AppDelegate s_sharedApplication;
     viewController.wantsFullScreenLayout = YES;
     viewController.view = __glView;
 
-    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    bannerView_ = [[GADBannerView alloc] initWithFrame:CGRectMake(0, __glView.frame.size.height - kGADAdSizeBanner.size.height, kGADAdSizeBanner.size.width, kGADAdSizeBanner.size.height)];
     bannerView_.adUnitID = @"a15304d2f41a753";
     bannerView_.rootViewController = viewController;
     [viewController.view addSubview:bannerView_];

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A922753C1517C094001B78AA"
-               BuildableName = "SudokuLounge.app"
+               BuildableName = "Sudoku Lounge.app"
                BlueprintName = "Sudoku Lounge"
                ReferencedContainer = "container:Sudoku Lounge.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A922753C1517C094001B78AA"
-            BuildableName = "SudokuLounge.app"
+            BuildableName = "Sudoku Lounge.app"
             BlueprintName = "Sudoku Lounge"
             ReferencedContainer = "container:Sudoku Lounge.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A922753C1517C094001B78AA"
-            BuildableName = "SudokuLounge.app"
+            BuildableName = "Sudoku Lounge.app"
             BlueprintName = "Sudoku Lounge"
             ReferencedContainer = "container:Sudoku Lounge.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A922753C1517C094001B78AA"
-            BuildableName = "SudokuLounge.app"
+            BuildableName = "Sudoku Lounge.app"
             BlueprintName = "Sudoku Lounge"
             ReferencedContainer = "container:Sudoku Lounge.xcodeproj">
          </BuildableReference>
