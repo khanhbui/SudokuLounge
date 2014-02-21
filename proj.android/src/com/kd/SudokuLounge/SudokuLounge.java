@@ -68,25 +68,23 @@ public class SudokuLounge extends Cocos2dxActivity implements ConnectionCallback
         .addOnConnectionFailedListener(this)
 	    .build();
 
-        AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
-        //adRequestBuilder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
-
         mAdView = new AdView(this);
         mAdView.setAdSize(AdSize.SMART_BANNER);
         mAdView.setAdUnitId("a153037ca8993b0");
-        mAdView.loadAd(adRequestBuilder.build());
         mAdView.setAdListener(new AdListener() {
         	@Override
         	public void onAdOpened() {
         	}
         });
-
-        LinearLayout layout = new LinearLayout(this);
-        layout.setOrientation(LinearLayout.VERTICAL);
-        layout.addView(mAdView);
+        AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
+        mAdView.loadAd(adRequestBuilder.build());
 
         Point size = new Point();
         getWindowManager().getDefaultDisplay().getSize(size);
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.setY(size.y - 75);
+        layout.addView(mAdView);
         addContentView(layout, new LayoutParams(size.x, 75));
 	}
 

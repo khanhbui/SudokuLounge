@@ -46,6 +46,7 @@ var MyLayer = cc.Layer.extend({
         this._table.setPosition(Utils.p(0, 50));
         this.addChild(this._table);
 
+        this._createTitle();
         this._createScorePanels();
         this._createButtons();
 
@@ -134,6 +135,22 @@ var MyLayer = cc.Layer.extend({
         this._timeLabel = cc.LabelTTF.create("Time: 00:00:00", "Arial", Utils.s(14));
         this._timeLabel.setPosition(Utils.p(120 / 2, 28 / 2));
         timePanel.addChild(this._timeLabel);
+    },
+
+    _createTitle: function() {
+        var title = cc.Node.create();
+        title.setPosition(Utils.p(320 / 2, 480 + 25));
+        this.addChild(title);
+
+        var sudoku = cc.Sprite.create("res/sudoku.png");
+        sudoku.setAnchorPoint(cc.p(0, 0.5));
+        sudoku.setPosition(Utils.p(-103, 0));
+        title.addChild(sudoku);
+
+        var lounge = cc.Sprite.create("res/lounge.png");
+        lounge.setAnchorPoint(cc.p(0, 0.5));
+        lounge.setPosition(Utils.p(0, 0));
+        title.addChild(lounge);
     }
 });
 
