@@ -14,7 +14,16 @@ var Table = cc.Node.extend({
         this._createCells();
         this._createCandidates();
 
-        cc.log("=====================");
+        this._wrongSprite = cc.Sprite.create("res/wrong.png");
+        this._wrongSprite.setPosition(Utils.p(320 / 2, 480 / 2));
+        this._wrongSprite.setVisible(false);
+        this.addChild(this._wrongSprite);
+
+        this._completedSprite = cc.Sprite.create("res/completed.png");
+        this._completedSprite.setPosition(Utils.p(320 / 2, 480 / 2));
+        this._completedSprite.setVisible(false);
+        this.addChild(this._completedSprite);
+
         return true;
     },
 
@@ -59,6 +68,8 @@ var Table = cc.Node.extend({
     },
 
     reset: function() {
+        this._completedSprite.setVisible(false);
+
         this._clearHighlight();
 
         this._sudoku.reset();
@@ -158,6 +169,7 @@ var Table = cc.Node.extend({
                 var p = this._candidates[index].getPosition();
                 this._candidates[index].setZOrder(1000);
                 this._candidates[index].runAction(cc.Sequence.create(
+                    cc.CallFunc.create(this.setEnabled.bind(this, false)),
                     cc.MoveTo.create(0.3, this._emptyCell.getPosition()),
                     cc.Hide.create(),
                     cc.CallFunc.create(function() {
@@ -168,6 +180,9 @@ var Table = cc.Node.extend({
                     cc.CallFunc.create(function() {
                         this._checkCandidates();
                         this._sudoku.setScore(20);
+
+                        this._checkCompleted();
+                        this.setEnabled(true);
                     }.bind(this))
                 ));
 
@@ -175,11 +190,21 @@ var Table = cc.Node.extend({
             }
             else {
                 this._candidates[number - 1].runAction(cc.Sequence.create(
+                    cc.CallFunc.create(this.setEnabled.bind(this, false)),
                     cc.RotateTo.create(0.05, 20),
                     cc.RotateTo.create(0.1, -20),
                     cc.RotateTo.create(0.05, 0),
-                    cc.CallFunc(function() {
+                    cc.CallFunc.create(function() {
                         this._sudoku.setScore(-10);
+
+                        this._wrongSprite.runAction(cc.Sequence.create(
+                            cc.FadeOut.create(0),
+                            cc.Show.create(),
+                            cc.FadeIn.create(0.2),
+                            cc.FadeOut.create(0.5),
+                            cc.Hide.create(),
+                            cc.CallFunc.create(this.setEnabled.bind(this, true))
+                        ));
                     }.bind(this))
                 ));
                 return;
@@ -195,6 +220,16 @@ var Table = cc.Node.extend({
             }
         }
         this._prevNumber = number;
+    },
+
+    _checkCompleted: function() {
+        if (this._sudoku.isCompleted()) {
+            this._completedSprite.runAction(cc.Sequence.create(
+                cc.FadeOut.create(0),
+                cc.Show.create(),
+                cc.FadeIn.create(0.5)
+            ));
+        }
     }
 });
 

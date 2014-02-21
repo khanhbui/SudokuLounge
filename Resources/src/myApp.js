@@ -49,6 +49,9 @@ var MyLayer = cc.Layer.extend({
         this._createScorePanels();
         this._createButtons();
 
+        this._isPlaying = false;
+        this._table.reset();
+
         return true;
     },
 
@@ -71,6 +74,7 @@ var MyLayer = cc.Layer.extend({
         var y = 82;
         var reset = new Button(["res/reset.png", "res/reset_disable.png", "res/reset_disable.png"], [x, y], function() {
             cc.log("reset");
+            this._isPlaying = false;
             this._table.reset();
             play.setEnabled(true);
             pause.setEnabled(false);
