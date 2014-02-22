@@ -75,7 +75,7 @@ var Table = cc.Node.extend({
         this._sudoku.reset();
         this._sudoku.solve();
         this._sudoku.print();
-        data = this._sudoku.getUnsolvedTable(3);
+        data = this._sudoku.getUnsolvedTable();
         this._setData(data);
 
         this._checkCandidates();
@@ -224,6 +224,7 @@ var Table = cc.Node.extend({
 
     _checkCompleted: function() {
         if (this._sudoku.isCompleted()) {
+            this._sudoku.increaseLevel();
             this._completedSprite.runAction(cc.Sequence.create(
                 cc.FadeOut.create(0),
                 cc.Show.create(),

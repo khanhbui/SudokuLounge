@@ -1,11 +1,13 @@
 require("src/core/Random.js");
 
 var TABLE_SIZE = 9;
+var LEVEL_STEPS = 3;
 
 var Sudoku = cc.Class.extend({
 	_rows: null,
 	_cols: null,
 	_cells: null,
+	_level: 30,
 
 	reset: function() {
 		this._rows = [];
@@ -124,7 +126,7 @@ var Sudoku = cc.Class.extend({
 
 	getUnsolvedTable: function(level) {
 		if (!this._problem) {
-			level = level || 20;
+			level = level || this._level;
 			var samples = this._getRandomValues(TABLE_SIZE * TABLE_SIZE);
 			samples = samples.splice(level, TABLE_SIZE * TABLE_SIZE - level);
 			cc.log("level: " + level + ", s: " + samples);
@@ -196,5 +198,9 @@ var Sudoku = cc.Class.extend({
 	setTime: function(time) {
 		this._time += time;
 		return this._time;
+	},
+
+	increaseLevel: function() {
+		this._level = Math.min(this._level + LEVEL_STEPS, 60);
 	}
 });

@@ -35,6 +35,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.drive.Drive;
+import com.google.android.gms.drive.internal.v;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -47,7 +48,7 @@ import android.util.Log;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
 
-public class SudokuLounge extends Cocos2dxActivity implements ConnectionCallbacks, OnConnectionFailedListener{
+public class SudokuLounge extends Cocos2dxActivity implements ConnectionCallbacks, OnConnectionFailedListener {
 	
 	private GoogleApiClient mGoogleApiClient;
 	// Request code to use when launching the resolution activity
@@ -68,24 +69,30 @@ public class SudokuLounge extends Cocos2dxActivity implements ConnectionCallback
         .addOnConnectionFailedListener(this)
 	    .build();
 
+        final Point size = new Point();
+        getWindowManager().getDefaultDisplay().getSize(size);
+
         mAdView = new AdView(this);
         mAdView.setAdSize(AdSize.SMART_BANNER);
         mAdView.setAdUnitId("a153037ca8993b0");
         mAdView.setAdListener(new AdListener() {
-        	@Override
-        	public void onAdOpened() {
-        	}
+            private boolean isNotSetY = true;
+            @Override
+            public void onAdLoaded() {
+                if (isNotSetY) {
+                    mAdView.setY(size.y - mAdView.getHeight());
+                    this.isNotSetY = false;
+                }
+            }
         });
         AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
         mAdView.loadAd(adRequestBuilder.build());
 
-        Point size = new Point();
-        getWindowManager().getDefaultDisplay().getSize(size);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
-        layout.setY(size.y - 75);
         layout.addView(mAdView);
-        addContentView(layout, new LayoutParams(size.x, 75));
+        Log.d("00000000000000", "---- " + layout.getY() + "|" + size.y + "|" + mAdView.getHeight());
+        addContentView(layout, new LayoutParams(size.x, size.y));
 	}
 
 	@Override

@@ -57,7 +57,11 @@ var MyLayer = cc.Layer.extend({
     },
 
     update: function(elapsed) {
-        if (!this._isPlaying || this._sudoku.isCompleted()) {
+        var isCompleted = this._sudoku.isCompleted();
+        if (isCompleted || !this._isPlaying) {
+            if (isCompleted) {
+                this._playButton.setEnabled(false);
+            }
             return;
         }
 
@@ -71,44 +75,41 @@ var MyLayer = cc.Layer.extend({
     },
 
     _createButtons: function() {
-        var x = 50;
+        var x = 75;
         var y = 82;
         var reset = new Button(["res/reset.png", "res/reset_disable.png", "res/reset_disable.png"], [x, y], function() {
             cc.log("reset");
             this._isPlaying = false;
             this._table.reset();
-            play.setEnabled(true);
-            pause.setEnabled(false);
+            this._playButton.setSelectedIndex(0);
+            this._playButton.setEnabled(true);
         }.bind(this));
         this.addChild(reset);
 
-        var play = new Button(["res/play.png", "res/play_disable.png", "res/play_disable.png"], [x + 55, y], function() {
-            cc.log("play");
-            play.setEnabled(false);
-            pause.setEnabled(true);
-            this._table.setEnabled(true);
-            this._isPlaying = true;
-        }.bind(this));
-        play.setEnabled(true);
-        this.addChild(play);
+        this._playButton = new ToggleButton(
+            ["res/play.png", "res/play_disable.png", "res/play_disable.png"],
+            ["res/pause.png", "res/pause_disable.png", "res/pause_disable.png"],
+            [x + 55, y],
+            [
+                function() {
+                    this._table.setEnabled(false);
+                    this._isPlaying = false;
+                }.bind(this),
+                function() {
+                    this._table.setEnabled(true);
+                    this._isPlaying = true;
+                }.bind(this)
+            ]
+        );
+        this.addChild(this._playButton);
 
-        var pause = new Button(["res/pause.png", "res/pause_disable.png", "res/pause_disable.png"], [x + 55 * 2, y], function() {
-            cc.log("pause");
-            play.setEnabled(true);
-            pause.setEnabled(false);
-            this._table.setEnabled(false);
-            this._isPlaying = false;
-        }.bind(this));
-        pause.setEnabled(false);
-        this.addChild(pause);
-
-        var hint = new Button(["res/hint.png", "res/hint_disable.png", "res/hint_disable.png"], [x + 55 * 3, y], function() {
+        var hint = new Button(["res/hint.png", "res/hint_disable.png", "res/hint_disable.png"], [x + 55 * 2, y], function() {
             cc.log("hint");
         }.bind(this));
         hint.setEnabled(false);
         this.addChild(hint);
 
-        var stop = new Button(["res/stop.png", "res/stop_disable.png", "res/stop_disable.png"], [x + 55 * 4, y], function() {
+        var stop = new Button(["res/stop.png", "res/stop_disable.png", "res/stop_disable.png"], [x + 55 * 3, y], function() {
             cc.log("stop");
             this.backClicked();
         }.bind(this));
@@ -154,6 +155,54 @@ var MyLayer = cc.Layer.extend({
     }
 });
 
+var ToggleButton = cc.Node.extend({
+    ctor: function(images1, images2, pos, onClicks) {
+        this._super();
+
+        this.setAnchorPoint(cc.p(0, 0));
+        this.setPosition(Utils.p(pos[0], pos[1]));
+
+        this._image1 = cc.MenuItemImage.create(
+            images1[0],
+            images1[1],
+            images1[2],
+            null,
+            this
+        );
+
+        this._image2 = cc.MenuItemImage.create(
+            images2[0],
+            images2[1],
+            images2[2],
+            null,
+            this
+        );
+
+        this._toggle = cc.MenuItemToggle.create(
+            this._image1,
+            this._image2,
+            function() {
+                var i = this._toggle.getSelectedIndex();
+                if (onClicks && onClicks[i]) {
+                    onClicks[i]();
+                }
+            }.bind(this)
+        );
+
+        this._menu = cc.Menu.create(this._toggle);
+        this._menu.setPosition(cc.p(0, 0));
+        this.addChild(this._menu);
+    },
+
+    setSelectedIndex: function(value) {
+        this._toggle.setSelectedIndex(value);
+    },
+
+    setEnabled: function(value) {
+        this._toggle.setEnabled(value);
+    }
+});
+
 var Button = cc.Node.extend({
     ctor: function(images, pos, onClick) {
         this._super();
@@ -170,7 +219,6 @@ var Button = cc.Node.extend({
                     onClick();
                 };
             }.bind(this),this);
-        this._image.setAnchorPoint(cc.p(0.5, 0.5));
 
         this._menu = cc.Menu.create(this._image);
         this._menu.setPosition(cc.p(0, 0));
