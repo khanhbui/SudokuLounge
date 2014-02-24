@@ -87,11 +87,16 @@ var Table = cc.Node.extend({
             for (var k = 0; k < TABLE_SIZE; ++k) {
                 this._cells[this._prevI][k].setHighlight(0);
             }
+            this._prevI = undefined;
         }
         if (this._prevJ >= 0) {
             for (var k = 0; k < TABLE_SIZE; ++k) {
                 this._cells[k][this._prevJ].setHighlight(0);
             }
+            this._prevJ = undefined;
+        }
+        if (this._emptyCell) {
+            this._emptyCell = undefined;
         }
         if (this._prevNumber > 0) {
             for (var i = 0; i < TABLE_SIZE; ++i) {
@@ -102,6 +107,7 @@ var Table = cc.Node.extend({
                     }
                 }
             }
+            this._prevNumber = undefined;
         }
     },
 
